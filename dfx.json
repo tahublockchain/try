@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "tahucoba": {
+      "main": "src/tahucoba/main.mo",
+      "type": "motoko"
+    },
+    "tahucoba_assets": {
+      "dependencies": [
+        "tahucoba"
+      ],
+      "frontend": {
+        "entrypoint": "src/tahucoba_assets/src/index.html"
+      },
+      "source": [
+        "src/tahucoba_assets/assets",
+        "dist/tahucoba_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.7.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
